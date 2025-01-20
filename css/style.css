@@ -1,0 +1,36 @@
+/* 
+    background-image:
+    linear-gradiant >> is a type of background-image: >> تداخل بين لونين او اكتر عن طريق خط فاصل  
+    - directions such as (to left), (to top), (to top right), ...... >> linear-gradient(to top right, red, blue);
+    - you can use degrees instead directions such as top, .... >> background-image: linear-gradient(45deg, red 50%, blue 50%);
+    - start pure color after specific percentage >> linear-gradient( red, red 35%, #fff 35%, #fff 70%, black 70%); >> "this is eygpt flay"
+    - use it with url(../imgage) >> to put it and reduce capacity of color over the image without use any another div (layer)
+    redial-gradian >> background-image: radial-gradient(yellow 20%, blue 20%); >> تداخل بين الالوان بشكل دائري
+
+*/
+body
+{
+    margin: 0;
+}
+.img
+{
+    width: 100px;
+    /* height: 50px; */
+}
+.img img
+{
+    max-width: 100%;
+}
+.test
+{
+    display: grid;
+    place-content: center center;
+    height: 100vh;
+
+    background-image: linear-gradient( rgba(255, 0, 0, .4), rgba(255, 0, 0, .4) 35%, rgba(255, 255, 255, .4) 35%, rgba(255, 255, 255, .4) 70%, rgba(0, 0, 0, 0.4) 70%), url(../images/hero\ img.jpg);
+
+    /* background-image: linear-gradient(45deg, red 50%, blue 50%); */
+
+    /* background-image: radial-gradient( yellow 20%, blue 20%); */
+
+}
