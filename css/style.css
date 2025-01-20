@@ -1,36 +1,35 @@
-/* 
-    background-image:
-    linear-gradiant >> is a type of background-image: >> تداخل بين لونين او اكتر عن طريق خط فاصل  
-    - directions such as (to left), (to top), (to top right), ...... >> linear-gradient(to top right, red, blue);
-    - you can use degrees instead directions such as top, .... >> background-image: linear-gradient(45deg, red 50%, blue 50%);
-    - start pure color after specific percentage >> linear-gradient( red, red 35%, #fff 35%, #fff 70%, black 70%); >> "this is eygpt flay"
-    - use it with url(../imgage) >> to put it and reduce capacity of color over the image without use any another div (layer)
-    redial-gradian >> background-image: radial-gradient(yellow 20%, blue 20%); >> تداخل بين الالوان بشكل دائري
+/*
+ box-shadow: x-offset y-offset spread>>"not required" blur color; 
+ x-offset: بعدالظل عن  ال x (-n px or n px)
+ y-offset: بعدالظل عن  ال y (-n px or n px)
+ spread: الانتشار
+ blur: الضباب
+ color: اللون
+
+ ممكن تعمل اكتر من ظل مع بعض عادي
+ box-shadow: -5px -5px 10px gray, 5px 5px 10px red;
 
 */
+
+
 body
 {
     margin: 0;
 }
-.img
-{
-    width: 100px;
-    /* height: 50px; */
-}
-.img img
-{
-    max-width: 100%;
-}
+
 .test
 {
-    display: grid;
-    place-content: center center;
-    height: 100vh;
+    background-image: linear-gradient(to top left, red, red 50%, gray, gray 50%);
+    width: 200px;
+    height: 200px;
+    margin: 100px auto;
 
-    background-image: linear-gradient( rgba(255, 0, 0, .4), rgba(255, 0, 0, .4) 35%, rgba(255, 255, 255, .4) 35%, rgba(255, 255, 255, .4) 70%, rgba(0, 0, 0, 0.4) 70%), url(../images/hero\ img.jpg);
+    /* box-shadow: -3px -3px 10px 7px gray; */
 
-    /* background-image: linear-gradient(45deg, red 50%, blue 50%); */
+    /* without spread */
+    box-shadow: -5px 0 10px black,5px 0 10px black, 0 -5px 10px blue,0 5px 10px blue;
 
-    /* background-image: radial-gradient( yellow 20%, blue 20%); */
+    
+    
 
 }
